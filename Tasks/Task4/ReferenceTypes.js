@@ -20,4 +20,4 @@ user.hi() //works fine
 // put these operations on separate lines, then this will be lost for sure or else this will passed
 
 let hi = user.hi;
-hi();
+hi(); // It gives reference error
