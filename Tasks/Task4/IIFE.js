@@ -19,7 +19,7 @@ const helloworld = () => 'Hello,World!';
     const helloworld = () => 'Hello IIFE';
     console.log(x);               // Isolated decorations are only valid inside the curly braces - so called IIFE
     console.log(helloworld());
-})(); // IIFE works all about scopes
+})(); // IIFE works all about scopes 
 
 console.log(x);
 console.log(helloworld());
@@ -52,13 +52,13 @@ const Score = (() => {
 // has a properties called cureent, increment and reset has value of count , increased value and set to zero or null
 
 Score.increment();
-console.log(Score.current());
+console.log(`Current Score: ${Score.current()}`);
 
 
 const Game = (() => {
     let count = 0;
     const current = () => {return count };
-    const increment = () => { count++};
+    const increment = () => { count++}; // increment function
     const reset = () => {count = 0};
     return {
         current: current,
@@ -71,4 +71,4 @@ const Game = (() => {
 // has a properties called cureent, increment and reset has value of count , increased value and set to zero or null
 
 Game.increment();
-console.log(Game.current());
+console.log(`Current Game Score is ${Game.current()}`);
