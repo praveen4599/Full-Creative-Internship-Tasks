@@ -1,0 +1,60 @@
+/* Container for the slides */
+.carousel-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Individual slide */
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Active slide */
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Slide images */
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Previous button */
+.carousel-prev {
+  left: 15px;
+}
+
+/* Next button */
+.carousel-next {
+  right: 15px;
+}
+
+/* Hover styles for navigation buttons */
+.carousel-button:hover {
+  opacity: 0.5;
+}
