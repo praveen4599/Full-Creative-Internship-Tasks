@@ -1,16 +1,14 @@
 const numbers = [1, -2, 2, 3];
 
 const items = numbers
-    .filter(n => n > 0)
-    .map(n => ({ value: n }))
-    .filter(obj => obj.value > 1)
-    .map(obj => obj.value);
-
+    .filter(n => n % 2 == 0)
+    .map(n => ({value:n}))
+    
 console.log(items);
 
-for (const x in items) {
-    console.log(items[x]);
-}
+// for (const x in items) {
+//     console.log(items[x]);
+// }
 
 const sum = numbers.reduce((a, c) => {
 
