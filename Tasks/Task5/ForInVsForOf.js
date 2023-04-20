@@ -1,6 +1,6 @@
 var person = {
     firstName: "GeeksforGeeks",
-    lastName: "<br>A Computer Science Portal for Geeks ",
+    lastName: "A Computer Science Portal for Geeks ",
     rank: 43
 };
 var userId = "";
