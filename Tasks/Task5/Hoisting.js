@@ -38,12 +38,13 @@ let greet = function() {
 
 // assigning a value to an undeclared variable implicitly creates it as a global variable when the assignment is executed
 
+codeHoist();
+
 // Hoisting
 function codeHoist() {
     a = 10;
     let b = 50;
 }
-codeHoist();
 
 console.log(a); // 10 -> a is created as a global variable
-console.log(b); // ReferenceError : b is not defined
+//console.log(b); // ReferenceError : b is not defined
