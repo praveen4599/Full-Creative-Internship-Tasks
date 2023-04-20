@@ -41,7 +41,6 @@ var slides = document.querySelectorAll(".carousel-slide"); // it is a list
       slideInterval = setInterval(nextSlide, 5000); // reset the sideInterval
     });
     
-  
     next.addEventListener("click", function(event) {
       event.preventDefault();
       clearInterval(slideInterval);
