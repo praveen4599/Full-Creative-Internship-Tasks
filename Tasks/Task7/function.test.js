@@ -47,3 +47,14 @@ test('Admin should be in usernames', () => {
     usernames = ['john', 'karen', 'admin'];
     expect(usernames).toContain('admin');
 });
+
+// adding positive numbers  is not zero
+
+test('Add Positive numbers is not zero', () => {
+
+    for(let i=1; i<10; i++){
+        for(let j=1; j<10; j++){
+            expect(functions.add(i,j)).not.toBe(0);
+        }
+    }
+});
