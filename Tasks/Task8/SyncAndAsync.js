@@ -29,17 +29,17 @@ hence there is a method called as clearInterval() to stop the execution of the s
 where the synchronous code will block further execution of the remaining code until it finishes the current one.*/
 
 function resolveAfter2Seconds() {
-    setTimeout(() => {
-      document.write("Bye!... TimesUp");
+  setTimeout(() => {
+    document.write("Bye!... TimesUp");
   }, 1000);
-  }
-  
-  async function asyncCall() {
-    console.log('calling');
-    await resolveAfter2Seconds();
-    console.log('Processing');
-    
-    console.log('Good bye!...');
-  }
-  
-  asyncCall();
+}
+
+async function asyncCall() {
+  console.log('calling');
+  await resolveAfter2Seconds();
+  console.log('Processing');
+
+  console.log('Good bye!...');
+}
+
+asyncCall();
