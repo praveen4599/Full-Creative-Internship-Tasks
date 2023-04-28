@@ -7,13 +7,13 @@ let promise = new Promise(function(resolve,reject){
 
 })
 
-// promise
-//     .then((value) =>{
-//     console.log(value);
-// })
-//     .catch((err) =>{
-//     console.log(err);  
-// })
+promise
+    .then((value) =>{
+    console.log(value);
+})
+    .catch((err) =>{
+    console.log(err);  
+})
 
 const getData = async() => { // here asynchronous function as a expression using arrow function
 
@@ -78,3 +78,29 @@ async function loadJson(url) {
 
 loadJson('https://javascript.info/no-such-user.json')
   .catch();
+
+function asynchronousOperations(){
+
+    let firstPromise = new Promise((resolve,reject) => {
+        resolve("firstPromise");
+    });
+
+    let secondPromise = new Promise((resolve,reject) => {
+        
+        setTimeout(() => {
+            resolve("secondPromise");
+        },1000);
+    });
+
+    let combinedPromises = Promise.all([firstPromise,secondPromise]); // Promise.all method allows array of promise objects as an argument.
+    return combinedPromises;
+    
+}
+
+async function execute(){
+
+    let data = await asynchronousOperations();
+    console.log(data);
+}
+
+execute();
