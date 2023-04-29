@@ -7,13 +7,16 @@ let promise = new Promise(function(resolve,reject){
 
 })
 
-promise
-    .then((value) =>{
-    console.log(value);
-})
-    .catch((err) =>{
-    console.log(err);  
-})
+// promise
+//     .then((value) =>{
+//     console.log(value);
+// })
+//     .catch((err) =>{
+//     console.log(err);  
+// })
+//     .finally(() =>{
+//         console.log('End'); // finally only when not get executed then/catch has return value
+//     })
 
 const getData = async() => { // here asynchronous function as a expression using arrow function
 
@@ -27,10 +30,15 @@ const getData = async() => { // here asynchronous function as a expression using
     catch(err){
         console.log(err);
     }
-
+    // finally only when not get executed try/catch has return value
+    finally{
+        console.log("End");
+    }
 }
 
 getData();
+
+// Use of async-await much easier for code readability than the then/catch/finally in Promise
 
 async function timeOut(){
 
@@ -103,4 +111,5 @@ async function execute(){
     console.log(data);
 }
 
-execute();
+execute(); 
+
