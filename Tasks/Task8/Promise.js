@@ -113,3 +113,23 @@ async function execute() {
 
 execute();
 
+var newPromise = new Promise(function(resolve, reject) {
+    setTimeout(() => {
+        //reject('Sorry dude');
+        resolve('Fullfilled the task');
+    }, 2000);
+});
+
+var newData = async () => {
+
+    try{
+        console.log(await newPromise);
+    }
+
+    catch(err){
+        console.log(err);
+    }
+
+}
+
+newData();
