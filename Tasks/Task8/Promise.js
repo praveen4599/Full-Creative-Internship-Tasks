@@ -103,6 +103,7 @@ function asynchronousOperations() {
     let combinedPromises = Promise.all([firstPromise, secondPromise]); // Promise.all method allows array of promise objects as an argument.
     return combinedPromises;
 
+    // Even a single entry gets rejected then Promise.all entirely gets rejected
 }
 
 async function execute() {

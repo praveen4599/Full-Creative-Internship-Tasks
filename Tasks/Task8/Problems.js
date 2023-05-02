@@ -42,6 +42,7 @@ async function sequentialAwait() {
 
   const first = await paused('first');
   const second = await paused('second');
+  
 }
 
 function delay(ms){
@@ -61,3 +62,4 @@ async function paused(id){
 }
 
 sequentialAwait();
+
