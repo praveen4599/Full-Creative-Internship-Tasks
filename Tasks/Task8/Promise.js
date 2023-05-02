@@ -1,7 +1,7 @@
 const { json } = require("body-parser");
 const { response } = require("express");
 
-let promise = new Promise(function(resolve,reject){
+let promise = new Promise(function (resolve, reject) {
     resolve("Process is Successful"); // here promise is resolved successfully
     // reject("Sorry some error occured!!!!"); // suppose if it is rejected
 
@@ -18,20 +18,20 @@ let promise = new Promise(function(resolve,reject){
 //         console.log('End'); // finally only when not get executed then/catch has return value
 //     })
 
-const getData = async() => { // here asynchronous function as a expression using arrow function
+const getData = async () => { // here asynchronous function as a expression using arrow function
 
     // promise has then catch method but here in asynchronous function i use try-catch block
 
-    try{
+    try {
         const data = await promise;
         console.log(data);
     }
 
-    catch(err){
+    catch (err) {
         console.log(err);
     }
     // finally only when not get executed try/catch has return value
-    finally{
+    finally {
         console.log("End");
     }
 }
@@ -40,11 +40,11 @@ getData();
 
 // Use of async-await much easier for code readability than the then/catch/finally in Promise
 
-async function timeOut(){
+async function timeOut() {
 
     let promise = new Promise((resolve, reject) => {
 
-        setTimeout(() => resolve("done!"),1000); 
+        setTimeout(() => resolve("done!"), 1000);
     });
     let result = await promise;
     console.log(result);
@@ -54,15 +54,15 @@ timeOut();
 
 async function wait() {
     await new Promise(resolve => setTimeout(resolve, 1000));
-  
+
     return 10;
-  }
-  
+}
+
 function set() {
     // shows 10 after 1 second
     wait().then((r) => (console.log(r)));
-  }
-  
+}
+
 set();
 
 let data = fetch('https://reqbin.com/echo/get/json');
@@ -71,45 +71,45 @@ data.then(response => (response.json()))
 
 
 
-async function loadJson(url) { 
+async function loadJson(url) {
 
-    let response = await fetch(url); 
-  
+    let response = await fetch(url);
+
     if (response.status == 200) {
-      let json = await response.json(); 
-      return json;
+        let json = await response.json();
+        return json;
     }
-  
+
     console.log(`${url} status ${response.status} Not Found`);
-  
+
 }
 
 loadJson('https://javascript.info/no-such-user.json')
-  .catch();
+    .catch();
 
-function asynchronousOperations(){
+function asynchronousOperations() {
 
-    let firstPromise = new Promise((resolve,reject) => {
+    let firstPromise = new Promise((resolve, reject) => {
         resolve("firstPromise");
     });
 
-    let secondPromise = new Promise((resolve,reject) => {
-        
+    let secondPromise = new Promise((resolve, reject) => {
+
         setTimeout(() => {
             resolve("secondPromise");
-        },1000);
+        }, 1000);
     });
 
-    let combinedPromises = Promise.all([firstPromise,secondPromise]); // Promise.all method allows array of promise objects as an argument.
+    let combinedPromises = Promise.all([firstPromise, secondPromise]); // Promise.all method allows array of promise objects as an argument.
     return combinedPromises;
-    
+
 }
 
-async function execute(){
+async function execute() {
 
     let data = await asynchronousOperations();
     console.log(data);
 }
 
-execute(); 
+execute();
 
