@@ -1,16 +1,16 @@
-// function callback1() {
-//   console.log("Callback 1 called.");
-// }
+function callback1() {
+  console.log("Callback 1 called.");
+}
 
-// function callback2() {
-//   console.log("Callback 2 called.");
-// }
+function callback2() {
+  console.log("Callback 2 called.");
+}
 
 
-// setTimeout(callback1, 2000);
-// for (let i = 0; i < 3; i++) {
-//   setTimeout(callback2, i * 1000);
-// }
+setTimeout(callback1, 2000);
+for (let i = 0; i < 3; i++) {
+  setTimeout(callback2, i * 1000);
+}
 
 
 const one = () => Promise.resolve('resolving....'); // It is in the Micro Task queue
@@ -45,9 +45,11 @@ async function sequentialAwait() {
 }
 
 function delay(ms){
-
+  
+  console.log("Calling delay");
   return new Promise((resolve,reject) => {
-    setTimeout(resolve,ms);
+    setTimeout(resolve,ms); 
+    // It will be in the Macro Tasks Queue executed after the asynchronus function
   });
 
 }
