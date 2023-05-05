@@ -35,3 +35,10 @@ function merge(_left, _right) {
 
 const array = [8, 20, -2, 4, -6, 0];
 console.log(`Sorted array: ${mergeSort(array)}`);
+
+let array1 = [1,2,3,4,5,6];
+
+array1.forEach(a => console.log(a));
+//console.log(a);
+array1.filter(a => a/2);
+console.log(array1);
