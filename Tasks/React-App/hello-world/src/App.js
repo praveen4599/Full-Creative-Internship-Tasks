@@ -41,9 +41,10 @@ class App extends Component {
     according to the clicking on the button */}      
           <button onClick={() => {this.setState({show: !this.state.show})}}>Toggle Child</button>
     
-          {/* <FunctionalComponent /> 
-          <ClassComponent/> */}
-           {/* <Child /> */}
+          <FunctionalComponent /> 
+        {/* <ClassComponent/>
+           <Child />
+           <Nav /> */}
           <h1>Component Will Unmount</h1>
          <h1>ComponentDidUpdate Life Cycle Method</h1>
          <button onClick={() => this.setState({counter:this.state.counter+1})}>Update counter {this.state.counter

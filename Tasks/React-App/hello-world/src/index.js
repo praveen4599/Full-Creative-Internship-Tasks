@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import HelloWorld from './HelloWorld';
-import App from './App';
+import TicTacToe from './TicTacToe';
 import reportWebVitals from './reportWebVitals';
 //import FunctionComponent from './FunctionalComponents.js/FunctionalComponents';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    
+    {/* <App /> */}
+    <TicTacToe />
   </React.StrictMode>
 );
 
